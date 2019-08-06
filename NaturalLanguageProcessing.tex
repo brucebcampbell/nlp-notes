@@ -9,7 +9,7 @@ This document is primarily meant to server as a brief tutorial to Natural Langua
   \item Computational complexity of natural language
   \item Computational semantics
   \item Computer-aided corpus linguistics
-  \item Development of parsers for natural languages
+  \item Parser Development for natural languages
   \item Development of taggers to identify parts of speech
   \item Word Sense Disambiguation
 \end{itemize}
@@ -32,7 +32,7 @@ Linguistic semantics refers to the meanings that language elements express.  It 
 
 
 \section{A Quantification the Semantic Information in WordNet}
- WordNet \cite{WORDNET} is a lexical database for the English language. It groups English words into sets of synonyms called synsets, provides short, general definitions, and records the various semantic relations between these synonym sets.  We are interested analyze the statistics of the WordNet semantic graph with the aim to inject sematic information into statistical models.  A "semantic sweetenting" of sorts.
+ WordNet \cite{WORDNET} is a lexical database for the English language. It groups English words into sets of synonyms called synsets, provides short, general definitions, and records the various semantic relations between these synonym sets.  We are interested in analyzing the statistics of the WordNet semantic graph with the aim to inject semantic information into statistical models.  A "semantic sweetenting" of sorts.
 
 \section{N-gram Models}
 N-grams are an important part of NLP tasks like tagging parts of speech, natural language generation [chatterbot engines], plagiarism identification, and character prediction in cell phone text input.  To get an idea of how an  n-gram model is built we will use example n-grams extracted from Anna Kerannina [AK].  The phrase \emph{"for the first time"}, a 4-gram, appears 27 times the body of the novel:
@@ -81,7 +81,7 @@ Where there is only one possible bigram matching the former string. Intra word p
 \begin{eqnarray*}
 P("the" | "the ") =1 \\
 P("the" | "the") = 16579/(16579+998+841+689+401) \\
-P("they" | "the" = 998/(16579+998+841+689+401)
+P("they" | "the") = 998/(16579+998+841+689+401)
 \end{eqnarray*}
 We refer to the conditional $g$ in $P(w|g)$ as the context, $ g= (w_{1}, ...,w_{i},...,w_{n})$  Using the chain rule this is broken into a product of conditional probabilities,
 
@@ -111,7 +111,7 @@ We can calculate the conditionals with our test corpus.  We use $*$ as a wild ca
 $P(for the first time)$ as calculated above is bigger than the ratio of \emph{for the first time} to all quad-grams $31/342132 = .0000906083$
 
 \section{Appendix : Syntax}
-Syntax is the rule set for constructing sentences in natural languages.  The word is the smallest unit of syntactical structure and a related to each other through rules of grammar.  Traditionally, grammar and syntax dictate that every sentence has a subject and predicate that form the nuclear part of a sentence  The parts of a sentence decorating subject and predicate are termed extranuclear.
+Syntax is the rule set for constructing sentences in natural languages.  The word is the smallest unit of syntactical structure and a related to each other through rules of grammar.  Traditionally, grammar and syntax dictate that every sentence has a subject and predicate that form the nuclear part of a sentence  The parts of a sentence decorating subject and predicate are termed extra-nuclear.
 There are eight traditional parts of speech (POS) in the English language:
 \begin{itemize}
   \item Verb : action or state \emph{Buddha \textbf{climbed} the wall.}
@@ -125,7 +125,7 @@ There are eight traditional parts of speech (POS) in the English language:
 \end{itemize}
 
 A more comprehensive POS list used in tagging, stemming, and inflecting text is presented below.
-This is from the well known PENN database.  The Penn Treebank Project annotates naturally-occuring text for linguistic structure \cite{PENNTREEBANK}.
+This is from the well known PENN database.  The Penn Treebank Project annotates naturally-occurring text for linguistic structure \cite{PENNTREEBANK}.
 \begin{tiny}
 \begin{tabular}{|c|c|}
   \hline
@@ -712,6 +712,3 @@ In logic, entailment, or strict implication, is properly defined for proposition
 \bibitem{WORDNET} http://wordnet.princeton.edu/ {\em WordNet - a large lexical database of English}
 \bibitem{WIKI} http://www.wikipedia.org/
 \end{thebibliography}
-
-
-
