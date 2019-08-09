@@ -2,7 +2,7 @@
 A word association graph using the based on the WordNet database.
 
 
-\section{Introduction}
+\section*{Introduction}
 This document is primarily meant to server as a brief tutorial to Natural Language Processing (NLP) as it applies to the problems of classification and prediction of text.  The statistical part comes from the use of corpora and probabilistic models in prediction and classification.  Computational linguistics is an interdisciplinary field dealing with the statistical and/or rule-based modeling of natural language from a computational perspective.  Computational linguistics is primarily concerned with developing algorithms and software for intelligently processing language data and is typically views as a subset of AI.  For our purposes we refer to classification as the process of estimating a categorical variable and prediction as the process of estimating a continuous variable.  For example , assigning a probability for the next word in a string of words is classification, while assigning a vulgarity index to a string of words is regarded as prediction.  A canonical open problem in Computational Linguistics is the automatic translation of one language into another, a task which requires understanding the morphological and syntactical structure of both languages. Other problems in this field include :
 \begin{center}
 \begin{itemize}
@@ -23,18 +23,18 @@ Some specific problems this document is concerned with are:
 
 While we are primarily interested in a statistical approach to natural language processing, a basic to understanding of syntax and semantics is required to handle the many 'outlier' cases one will encounter.  Modern English has many exceptional rules that must be dealt with.  This document contains two appendices with definitions that reader will want to be familiar with.  Two important tasks in NLP are the decoding of syntactic and semantic information.  These are discussed broadly below.
 
-\subsection{Semantics}
+\subsection*{Semantics}
 Linguistic semantics refers to the meanings that language elements express.  It typically focuses on the relation between signifiers, such as words, phrases, signs and symbols, and what they stand for.  The term is used in ordinary language to denote a problem of understanding that comes down to word selection or connotation. In written language, such things as paragraph structure and punctuation have semantic content.  The basic unit of semantics is sense.  One word may have many different meanings.  Deriving the meaning from a context - called word sense disambiguation - is a key task in computational linguistics.
 
-\subsection{Lexicography}Lexicography is divided into two related disciplines, practical and theoretical.  Practical lexicography is the art or craft of compiling, writing and editing dictionaries.  Theoretical lexicography is the scholarly discipline of analyzing and describing the semantic, syntagmatic and paradigmatic relationships within the lexicon (vocabulary) of a language, developing theories of dictionary components and structures linking the data in dictionaries, the needs for information by users in specific types of situation, and how users may best access the data incorporated in printed and electronic dictionaries.
+\subsection*{Lexicography}Lexicography is divided into two related disciplines, practical and theoretical.  Practical lexicography is the art or craft of compiling, writing and editing dictionaries.  Theoretical lexicography is the scholarly discipline of analyzing and describing the semantic, syntagmatic and paradigmatic relationships within the lexicon (vocabulary) of a language, developing theories of dictionary components and structures linking the data in dictionaries, the needs for information by users in specific types of situation, and how users may best access the data incorporated in printed and electronic dictionaries.
 
-\subsection{Corpus linguistics} Corpus linguistics is the study of language as expressed in samples (corpora) or "real world" text. This method represents a digestive approach to deriving a set of abstract rules by which a natural language is governed or else relates to another language. Originally done by hand, corpora are now largely derived by an automated process.
+\subsection*{Corpus linguistics} Corpus linguistics is the study of language as expressed in samples (corpora) or "real world" text. This method represents a digestive approach to deriving a set of abstract rules by which a natural language is governed or else relates to another language. Originally done by hand, corpora are now largely derived by an automated process.
 
 
-\section{A Quantification the Semantic Information in WordNet}
+\section*{A Quantification the Semantic Information in WordNet}
  WordNet \cite{WORDNET} is a lexical database for the English language. It groups English words into sets of synonyms called synsets, provides short, general definitions, and records the various semantic relations between these synonym sets.  We are interested in analyzing the statistics of the WordNet semantic graph with the aim to inject semantic information into statistical models.  A "semantic sweetenting" of sorts.
 
-\section{N-gram Models}
+\section*{N-gram Models}
 N-grams are an important part of NLP tasks like tagging parts of speech, natural language generation [chatterbot engines], plagiarism identification, and character prediction in cell phone text input.  To get an idea of how an  n-gram model is built we will use example n-grams extracted from Anna Kerannina [AK].  The phrase \emph{"for the first time"}, a 4-gram, appears 27 times the body of the novel:
 \begin{tiny}
 \begin{itemize}
@@ -110,7 +110,7 @@ We can calculate the conditionals with our test corpus.  We use $*$ as a wild ca
 
 $P(for the first time)$ as calculated above is bigger than the ratio of \emph{for the first time} to all quad-grams $31/342132 = .0000906083$
 
-\section{Appendix : Syntax}
+\section*{Syntax}
 Syntax is the rule set for constructing sentences in natural languages.  The word is the smallest unit of syntactical structure and a related to each other through rules of grammar.  Traditionally, grammar and syntax dictate that every sentence has a subject and predicate that form the nuclear part of a sentence  The parts of a sentence decorating subject and predicate are termed extra-nuclear.
 There are eight traditional parts of speech (POS) in the English language:
 \begin{itemize}
@@ -173,7 +173,7 @@ One will generally encounter rule-sets to transform between parts of speech in s
 
 
 \begin{small}
-\subsection{Grammatical Syntactic Definitions}
+\subsection*{Grammatical Syntactic Definitions}
 \subsubsection{adjective}
 An adjective is a word whose main syntactic role is to modify a noun or pronoun, giving more information about the noun or pronoun's referent. The adjective order in English is:
 \begin{center}
@@ -374,15 +374,15 @@ Nouns and noun phrases can typically be replaced by pronouns, such as he, it, wh
 \end{itemize}
 \end{small}
 
-\subsection{Grammar}
+\subsection*{Grammar}
 A formal grammar (sometimes simply called a grammar) is a set of rules of a specific kind, for forming strings in a formal language. The rules describe how to form strings from the language's alphabet that are valid according to the language's syntax. A grammar does not describe the meaning of the strings or what can be done with them in whatever context,only their form.
 Formal language theory, the discipline which studies formal grammars and languages, is a branch of applied mathematics. Its applications are found in theoretical computer science, theoretical linguistics, formal semantics, mathematical logic, and other areas.
 A formal grammar is a set of rules for rewriting strings, along with a "start symbol" from which rewriting must start. Therefore, a grammar is usually thought of as a language generator. However, it can also sometimes be used as the basis for a "recognizer"-a function in computing that determines whether a given string belongs to the language or is grammatically incorrect. To describe such recognizers, formal language theory uses separate formalisms, known as automata theory. One of the interesting results of automata theory is that it is not possible to design a recognizer for certain formal languages.
 
-\subsection{Parsing}
+\subsection*{Parsing}
 Parsing is the process of recognizing an utterance (a string in natural languages) by breaking it down to a set of symbols and analyzing each one against the grammar of the language. Most languages have the meanings of their utterances structured according to their syntax-a practice known as compositional semantics. As a result, the first step to describing the meaning of an utterance in language is to break it down part by part and look at its analyzed form (known as its parse tree in computer science, and as its deep structure in generative grammar).
 
-\subsection{Generative Grammar}
+\subsection*{Generative Grammar}
 The hypothesis of generative grammar is that language is a structure of the human mind. The goal of generative grammar is to make a complete model of this inner language (known as i-language). This model could be used to describe all human language and to predict the grammaticality of any given utterance (that is, to predict whether the utterance would sound correct to native speakers of the language). This approach to language was pioneered by Noam Chomsky. Most generative theories (although not all of them) assume that syntax is based upon the constituent structure of sentences. Generative grammars are among the theories that focus primarily on the form of a sentence, rather than its communicative function.
 
 Among the many generative theories of linguistics, the Chomskyan theories are:
@@ -394,7 +394,7 @@ Among the many generative theories of linguistics, the Chomskyan theories are:
 
 
 
-\subsection{Collocation} Within the area of corpus linguistics, collocation defines a sequence of words or terms that co-occur more often than would be expected by chance. The term is often used in the same sense as linguistic government.
+\subsection*{Collocation} Within the area of corpus linguistics, collocation defines a sequence of words or terms that co-occur more often than would be expected by chance. The term is often used in the same sense as linguistic government.
 
 Collocation defines restrictions on how words can be used together, for example, which prepositions are used with ("governed by") particular verbs, or which verbs and nouns are typically used together. An example of this (from Michael Halliday) is the collocation strong tea. While the same meaning could be conveyed through the roughly equivalent powerful tea, the fact is that tea is thought of being strong rather than powerful. A similar observation holds for powerful computers, which is preferred over strong computers.
 
@@ -402,7 +402,7 @@ Collocations are examples of lexical units. Collocations should not be confused 
 
 Collocation extraction is a task that extracts collocations automatically from a corpus, using computational linguistics.
 
-\subsection{Semantic prosody} Semantic prosody, also discourse prosody, describes the way in which certain seemingly neutral words can be perceived with positive or negative associations through frequent occurrences with particular collocations.
+\subsection*{Semantic prosody} Semantic prosody, also discourse prosody, describes the way in which certain seemingly neutral words can be perceived with positive or negative associations through frequent occurrences with particular collocations.
 
 An example given by John Sinclair is the combination, set in, which has a negative prosody: rot is a prime example for what is going to set in. Other well-known examples are cause, which is also used mostly in a negative context (accident, catastrophe, etc.), though one can also say that something "caused happiness".
 
@@ -410,24 +410,24 @@ In recent years, linguists have found many hidden associations affecting the neu
 
 Prosody has also been used to analyze discourse structure. Discourse is not a mere concatenation of utterances; talk is organized in sections through relations between discourse segments, topicality, or other ways. Prosody has been found to correlate with these structures of discourse, notably via key (the pitch of a first prominent syllable in an utterance).
 
-\subsection{Root}
+\subsection*{Root}
 The root is the primary lexical unit of a word, which carries the most significant aspects of semantic content and cannot be reduced into smaller constituents. Content words in nearly all languages contain, and may consist only of, root morphemes. However,sometimes the term "root" is also used to describe the word minus its inflectional endings, but with its lexical endings in place. For example, chatters has the inflectional root or lemma chatter, but the lexical root chat. Inflectional roots are often called stems, and a root in the stricter sense may be thought of as a monomorphemic stem.  The traditional definition allows roots to be either free morphemes or bound morphemes. Root morphemes are essential for affixation and compounds.
 
 The root of a word is a unit of meaning (morpheme) and, as such, it is an abstraction, though it can usually be represented in writing as a word would be. For example, it can be said that the root of the English verb form running is run, or the root of the Spanish superlative adjective amplisimo is ampl-, since those words are clearly derived from the root forms by simple suffixes that do not alter the roots in any way. In particular, English has very little inflection, and hence a tendency to have words that are identical to their roots. But more complicated inflection, as well as other processes, can obscure the root; for example, the root of mice is mouse (still a valid word), and the root of interrupt is, arguably, rupt, which is not a word in English and only appears in derivational forms (such as disrupt, corrupt, rupture, etc.). The root rupt is written as if it were a word, but it's not.
 
-\subsection{Stem}
+\subsection*{Stem}
 A stem is a part of a word. The term is used with slightly different meanings.
 In one usage, a stem is a form to which affixes can be attached. Thus, in this usage, the English word friendships contains the stem friend, to which the derivational suffix -ship is attached to form a new stem friendship, to which the inflectional suffix -s is attached. In a variant of this usage, the root of the word (in the example, friend) is not counted as a stem.
 In a slightly different usage, which is adopted in the remainder of this article, a word has a single stem, namely the part of the word that is common to all its inflected variants. Thus, in this usage, all derivational affixes are part of the stem. For example, the stem of friendships is friendship, to which the inflectional suffix -s is attached.
 Stems may be roots, e.g. run, or they may be morphologically complex, as in compound words (cf. the compound nouns meat ball or bottle opener) or words with derivational morphemes (cf. the derived verbs black-en or standard-ize). Thus, the stem of the complex English noun photographer is photo -graph - er, but not photo. For another example, the root of the English verb form destabilized is stabil-, a form of stable that does not occur alone; the stem is de-stabil-ize, which includes the derivational affixes de- and -ize, but not the inflectional past tense suffix -(e)d. That is, a stem is that part of a word that inflectional affixes attach to.
 
-\subsection{Morpheme}
+\subsection*{Morpheme}
 A morpheme is the smallest component of word, or other linguistic unit, that has semantic meaning. The term is used as part of the branch of linguistics known as morpheme-based morphology. A morpheme is composed by phoneme(s) (the smallest linguistically distinctive units of sound) in spoken language, and by grapheme(s) (the smallest units of written language) in written language.  The concept of word and morpheme are different, a morpheme may or may not stand alone. One or several morphemes compose a word. A morpheme is free if it can stand alone (ex: "one", "possible"), or bound if it is used exclusively alongside a free morpheme (ex: "im" in impossible). Its actual phonetic representation is the morph, with the different morphs ("in-", "im-") representing the same morpheme being grouped as its allomorphs.
-\subsection{Lexeme}
+\subsection*{Lexeme}
 A lexeme  is an abstract unit of morphological analysis in linguistics, that roughly corresponds to a set of forms taken by a single word. For example, in the English language, run, runs, ran and running are forms of the same lexeme, conventionally written as RUN. A related concept is the lemma (or citation form), which is a particular form of a lexeme that is chosen by convention to represent a canonical form of a lexeme. Lemmas are used in dictionaries as the headwords, and other forms of a lexeme are often listed later in the entry if they are not common conjugations of that word.
 A lexeme belongs to a particular syntactic category, has a certain meaning (semantic value), and in inflecting languages, has a corresponding inflectional paradigm; that is, a lexeme in many languages will have many different forms. For example, the lexeme RUN has a present third person singular form runs, a present non-third-person singular form run (which also functions as the past participle and non-finite form), a past form ran, and a present participle running. (It does not include runner, runners, runnable, etc.) The use of the forms of a lexeme is governed by rules of grammar; in the case of English verbs such as RUN, these include subject-verb agreement and compound tense rules, which determine which form of a verb can be used in a given sentence.
 
-\subsection{Word Structure : affix,prefix, suffix}
+\subsection*{Word Structure : affix,prefix, suffix}
 An affix is a morpheme that is attached to a word stem to form a new word. Affixes may be derivational, like English \emph{ness} and \emph{pre}, or inflectional, like English plural \emph{s} and past tense \emph{ed}. They are bound morphemes by definition; prefixes and suffixes may be separable affixes. Affixation is, thus, the linguistic process speakers use to form new words (neologisms) by adding morphemes (affixes) at the beginning (prefixation), the middle (infixation) or the end (suffixation) of words.
 
 A prefix is an affix which is placed before the stem of a word. Particularly in the study of Semitic languages, a prefix is called a preformative, because it alters the form of the words to which it is affixed.
@@ -482,7 +482,7 @@ English derivational suffixes :
 \emph{al}
 \emph{ish}
 
-\subsection{Lemma}
+\subsection*{Lemma}
 In linguistics a lemma (plural lemmas or lemmata) is either of two things:
 \begin{itemize}
   \item Morphology, lexicography: the canonical form, dictionary form, or citation form of a set of words (headword); e.g., in English, run, runs, ran and running are forms of the same lexeme, with run as the lemma.
@@ -491,12 +491,12 @@ A lemma in morphology is the canonical form of a lexeme. Lexeme, in this context
 \end{itemize}
 The psycholinguistics interpretation refers to one of the more widely accepted psycholinguistic models of speech production, referring to an early stage in the mental preparation for an utterance. Here, lemma is the abstract form of a word that arises after the word has been selected mentally, but before any information has been accessed about the sounds in it (and thus before the word can be pronounced). It therefore contains information concerning only meaning and the relation of this word to others in the sentence.
 
-\subsection{Differences Between a Stem and a Lemma}
+\subsection*{Differences Between a Stem and a Lemma}
 A stem is the part of the word that never changes even when morphologically inflected, whilst a lemma is the base form of the verb. For example, from "produced", the lemma is "produce", but the stem is "produc-." This is because there are words such as production. In linguistic analysis, the stem is defined more generally as the analyzed base form from which all inflected forms can be formed. When phonology is taken into account, the definition of the unchangeable part of the word is not useful, as can be seen in the phonological forms of the words in the preceding example: "produced", "production".  Some lexemes have several stems but one lemma. For instance "to go" (the lemma) has the stems "go" and "wend". (The past tense is based on a different verb, "to wend". The "-t" suffix may be considered as equivalent to "-ed".)
 
-\subsection{Lexicon}
+\subsection*{Lexicon}
 The lexicon of a language is its vocabulary, including its words and expressions. More formally, it is a language's inventory of lexemes. The lexicon includes the lexemes used to actualize words. Lexemes are formed according to morpho-syntactic rules and express sememes. In this sense, a lexicon organizes the mental vocabulary in a speaker's mind: First, it organizes the vocabulary of a language according to certain principles (for instance, all verbs of motion may be linked in a lexical network) and second, it contains a generative device producing (new) simple and complex words according to certain lexical rules. For example, the suffix \emph{able} can be added to transitive verbs only, so that we get \emph{readable} but not \emph{cryable}.  Usually a lexicon is a container for words belonging to the same language.
-\subsection{Morphology}
+\subsection*{Morphology}
 Morphology is the identification, analysis and description of the structure of morphemes and other units of meaning in a language like words, affixes, and parts of speech and intonation/stress, implied context (words in a lexicon are the subject matter of lexicology). Morphological typology represents a way of classifying languages according to the ways by which morphemes are used in a language from the analytic that use only isolated morphemes, through the agglutinative ("stuck-together") and fusional languages that use bound morphemes (affixes), up to the polysynthetic, which compress lots of separate morphemes into single words.
 
 Words are generally accepted as being the smallest units of syntax,and are related to other words by rules of grammar. For example, English speakers recognize that the words dog and dogs are closely related - differentiated only by the plurality morpheme "-s," which is only found bound to nouns, and is never separate. Speakers of English (a fusional language) recognize these relations from their tacit knowledge of the rules of word formation in English. They infer intuitively that dog is to dogs as cat is to cats; similarly, dog is to dog catcher as dish is to dishwasher (in one sense). The rules understood by the speaker reflect specific patterns (or regularities) in the way words are formed from smaller units and how those smaller units interact in speech. In this way, morphology is the branch of linguistics that studies patterns of word formation within and across languages, and attempts to formulate rules that model the knowledge of the speakers of those languages. A morpheme is the smallest component of word, or other linguistic unit, that has semantic meaning. The term is used as part of the branch of linguistics known as morpheme-based morphology. A morpheme is composed by phoneme(s) (the smallest linguistically distinctive units of sound) in spoken language, and by grapheme(s) (the smallest units of written language) in written language.
@@ -505,7 +505,7 @@ The concept of word and morpheme are different, a morpheme may or may not stand 
 
 There are some distinguished types of bound morphemes.  A  unique morpheme is one with extremely limited distribution so that it occurs in only one word. A popular example is cran- in cranberry" (hence the term "cranberry morpheme"), although this example is something of a technicality given that it is an alteration or contraction of the free morpheme "crane".  Unique morphemes are examples of the linguistic notion of fossilization: loss of productivity or usage of grammar units: words, phrases, parts of words. Besides fossilized root morphemes, there are also fossilized affixes (suffixes and prefixes).
 
-\subsection{Inflection}
+\subsection*{Inflection}
 In grammar, inflection or inflexion is the modification of a word to express different grammatical categories such as tense, mood, voice, aspect, person, number, gender and case. Conjugation is the inflection of verbs; declension is the inflection of nouns, adjectives and pronouns.
 
 Inflection can be overt or covert within the same language. An overt inflection expresses grammatical category with an explicitly stated suffix. In English, the word "lead" is not marked for either person or number, and is only marked for tense in opposition to "led" (i.e. is not specifically future tense). The whole clause, however, achieves all the grammatical categories by the inclusion of extra words. This is covert inflection (or periphrasis).  The process typically distinguishes lexical items (such as lexemes) from functional ones (such as affixes, clitics, particles and morphemes in general) and has functional items acting as markers on lexical ones.
@@ -516,13 +516,13 @@ Constraining the cross-referencing of inflection in a sentence is known as conco
 
 Languages that have some degree of overt inflection are inflected languages. The latter can be highly inflected, such as Latin (overtly), or weakly inflected, such as English (covertly), depending on the presence or absence of overt inflection. And, historically, English was traditionally described as a non-inflected Indo-European language.
 
-\subsection{Derivation}
+\subsection*{Derivation}
 Derivation is  the process by which new words, as with \emph{happiness} and \emph{unhappy} from \emph{happy}, or \emph{determination} from \emph{determine}. A contrast is intended with the process of inflection, which uses another kind of affix in order to form variants of the same word, as with \emph{determine/determine-s/determin-ing/determin-ed}.  A derivational suffix usually applies to words of one syntactic category and changes them into words of another syntactic category. For example, the English derivational suffix \emph{ly} changes adjectives into adverbs
 
-\subsection{Inflection Versus Derivation}
+\subsection*{Inflection Versus Derivation}
 Inflection is the process of adding inflectional morphemes (smallest units of meaning) to a word, which indicate grammatical information (for example, case, number, person, gender or word class, mood, tense, or aspect). Derivation is the process of adding derivational morphemes, which create a new word from existing words, sometimes by simply changing grammatical category (for example, changing a noun to a verb).  Words generally are not listed in dictionaries (in which case they would be lexical items) on the basis of their inflectional morphemes. But they often are listed on the basis of their derivational morphemes. For instance, English dictionaries list readable and readability, words with derivational suffixes, along with their root read. However, no traditional English dictionary lists book as one entry and books as a separate entry nor do they list jump and jumped as two different entries.
 
-\subsection{Inflectional Morphology}
+\subsection*{Inflectional Morphology}
 Languages that add inflectional morphemes to words are sometimes called inflectional languages, which is a synonym for inflected languages. Morphemes may be added in several different ways:
 \begin{itemize}
   \item Affixation, or simply adding morphemes onto the word without changing the root
@@ -532,7 +532,7 @@ Languages that add inflectional morphemes to words are sometimes called inflecti
 Suprasegmental variations, such as of stress, pitch or tone, where no sounds are added or changed but the intonation and relative strength of each sound is altered regularly. For an example, see Initial-stress-derived noun.
 
 Affixing includes prefixing (adding before the base), and suffixing (adding after the base), as well as the much less common infixing (inside) and circumfixing (a combination of prefix and suffix).Inflection is most typically realized by adding an inflectional morpheme (that is, affixation) to the base form (either the root or a stem).
-\subsection{Fossilization}
+\subsection*{Fossilization}
 In linguistic morphology, fossilization refers to two close notions. One is preserving of ancient linguistic features which have lost their grammatical functions in language. Another is loss of productivity of a grammatical paradigm (e.g., of an affix), which still remains in use in some words.
 Examples of fossilization include fossilized morphemes and fossil words.  A fossil word is an obsolete word which remains in currency because it is contained within an idiom still in use.  It can also occur for phrases, such as in point ('relevant'), which is retained in the larger phrases case in point and in point of fact, but is not otherwise used outside of a legal context.
 
@@ -555,7 +555,7 @@ Shrift, as in 'short shrift'
 Amok, as in 'run amok'
 \end{center}
 
-\subsection{Stemming}
+\subsection*{Stemming}
 Stemming is the process for reducing inflected (or sometimes derived) words to their stem, base or root form - generally a written word form. The stem need not be identical to the morphological root of the word; it is usually sufficient that related words map to the same stem, even if this stem is not in itself a valid root. The algorithm has been a long-standing problem in computer science; the first paper on the subject was published in 1968. The process of stemming, often called conflation, is useful in search engines for query expansion or indexing and other natural language processing problems.  Stemming programs are commonly referred to as stemming algorithms or stemmers.
 
 \subsubsection{Brute Force Stemming}
@@ -582,10 +582,10 @@ In language modeling, one could write a software program that stores a large tab
 From the table an algorithm can garner the probability of the second word following the first word by assessing each word's frequency and the frequency of the bigrams and perhaps other criteria like the total number of bigrams or the total number of bigrams where the first word is the same. For example, one would be able to state conclusions like: the presence of the word post indicates a probability of the following word being office of 50\%, because the sequence occurred this way 50\% of the time in the text (where post occurred with and without office following it).  In the bi-gram relationship, the first word can be understood as the context that describes the second word. It qualifies the second word, providing additional insight into its meaning. Humans use the technique of examining the context of words to determine the meaning of written words quite frequently. Words can have multiple meanings, called senses. The bigram-provided context provides a way to distinguish which sense of the word is used (well, most of the time, as literary puns and the like are the obvious exception). As mentioned elsewhere, the stemming algorithm can use this context as additional information to assist in determining the outcome of the algorithm (whether or not the current word is stemmed, which of one or more possible stems is appropriate, whether to use substitution or stripping, whether the word is a verb or noun or some other lexical category, etc). Because the algorithm used probabilities in determining the outcome, it is a stochastic algorithm.
 Entering into the realm of stochastic algorithms may greatly complicate the stemming algorithm, making it much harder to develop, distribute and maintain. There is considerable debate over its benefits. If a simple suffix stripper can get to about 80\% accuracy from a few days or weeks of programming, then how much more valuable is it that a context-driven n-gram stemmer can achieve 90\% accuracy given several months of work? There are also many problems with stochastic stemmers. What if the body of text used to derive the probabilities of the bigrams is not a representative sample of all documents ever written in a given language (and it is likely not)? What if the algorithm's bigram table 'becomes corrupted', by learning from 'bad text'? Reconfiguring a brute force algorithm that employs a lookup table is as simple as going in and removing a row from the table. But how does one reconfigure a probabilistic network (this is analogous to some of the problems behind neural networks)?
 
-\section{Appendix : Semantics}
+\section*{ Semantics}
 Words can be related by various attributes such as similarity, membership, or by lexical relations through morphological constructs.  Morphological categorization into different grammatical categories such as tense, mood, voice, aspect, person, number, gender and case is generally accomplished through the rules of inflection.  We use WordNet as a source for semantic relationships, and discuss the concepts of semantics within the framework of the WordNet model.
 
-\subsection{Word Relationships in the WordNet database }
+\subsection*{Word Relationships in the WordNet database }
  WordNet \cite{WORDNET} is a lexical database for the English language. It groups English words into sets of synonyms called synsets, provides short, general definitions, and records the various semantic relations between these synonym sets.  Synonymy is a lexical relation between word forms. It is assigned a central role in WordNet. Semantic relations are indicated by pointers to other words. WordNet is organized by semantic relations. A semantic relation is a relation between meanings and since meanings can be represented by synsets.  It is natural to think of semantic relations as pointers between synsets. It is characteristic of semantic relations that they are reciprocated: if there is a semantic relation R between meaning {x, x0, . . .} and meaning {y, y0, . . .}, then there is also a relation R~ between {y, y0, . . .} and {x, x0, . . .}.
 
 Semantic Relations Found In WordNet:
@@ -703,30 +703,36 @@ In logic, entailment, or strict implication, is properly defined for proposition
 \item antiinstance
 \end{itemize}
 
-\section{Computational Linguistics: Pre-processing steps}
+\section*{Computational Linguistics}
 
 \includegraphics[width=6in,height=4in]{NLP-TextAnalysis.png}
 
 There are a number of common pre-processing steps used before training a natural language model. We talk about those here. There are libraries and databases available to implement these. It's best to stick with well tested software and data sets that are widely used unless you're a computational linguist.  See
 
-\subsection{Tokenization}
+\subsection*{Tokenization}
 
 Tokenization is, generally, an early step in the NLP process, a step which splits longer strings of text into smaller pieces, or tokens. Larger chunks of text can be tokenized into sentences, sentences can be tokenized into words, etc. Further processing is generally performed after a piece of text has been appropriately tokenized.
 
-\subsection{Normalization}
+\subsection*{Normalization}
 
 Before further processing, text needs to be normalized. Normalization generally refers to a series of related tasks meant to put all text on a level playing field: converting all text to the same case (upper or lower), removing punctuation, expanding contractions, converting numbers to their word equivalents, and so on. Normalization puts all words on equal footing, and allows processing to proceed uniformly.
 
-\subsection{Stemming}
+\subsection*{Stemming}
 
 Stemming is the process of eliminating affixes (suffixed, prefixes, infixes, circumfixes) from a word in order to obtain a word stem.
 
 running -> run
 
-4. Lemmatization
+\subsection*{Lemmatization}
 
 Lemmatization is related to stemming, differing in that lemmatization is able to capture canonical forms based on a word's lemma.
 
 For example, stemming the word "better" would fail to return its citation form (another word for lemma); however, lemmatization would result in the following:
 
 better -> good
+
+\subsection*{Vector Semantics}
+Words that occur in similar contexts tend to have similar meanings. This link between similarity in how words are distributed and similarity in what they mean is called the distributional hypothesis. Vector semantics which implements the distributional hypotheses by learning representations of the meaning of words directly from their distributions in texts.These word representations are a form of representation learning - the unsupervised learning of useful representations of the input text.
+
+
+

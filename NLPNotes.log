@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.6.13)  8 AUG 2019 12:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.6.13)  9 AUG 2019 13:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -241,21 +241,7 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-(./NLPNotes.toc
-LaTeX Font Info:    Try loading font information for U+msa on input line 1.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 1.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Try loading font information for U+lasy on input line 1.
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
-File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-))
+(./NLPNotes.toc)
 \tf@toc=\write3
 \openout3 = `NLPNotes.toc'.
 
@@ -265,7 +251,8 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 \openout2 = `NaturalLanguageProcessing.aux'.
 
- (./NaturalLanguageProcessing.tex
+
+(./NaturalLanguageProcessing.tex
 <wordassociation.jpg, id=8, 2558.55875pt x 2075.755pt>
 File: wordassociation.jpg Graphic file (type jpg)
 <use wordassociation.jpg>
@@ -285,6 +272,11 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
  [2
 
  <./wordassociation.jpg>] [3]
+Overfull \hbox (18.18108pt too wide) in paragraph at lines 34--34
+[]\OT1/cmr/bx/n/14.4 A Quan-tifi-ca-tion the Se-man-tic In-for-ma-tion in Word-
+
+ []
+
 
 Package natbib Warning: Citation `WORDNET' on page 4 undefined on input line 35
 .
@@ -292,6 +284,20 @@ Package natbib Warning: Citation `WORDNET' on page 4 undefined on input line 35
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <5> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 41.
 [4]
+LaTeX Font Info:    Try loading font information for U+msa on input line 81.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 81.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for U+lasy on input line 81.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
 Overfull \hbox (21.56285pt too wide) in alignment at lines 88--93
  [][][] []
  []
@@ -378,7 +384,7 @@ Here is how much of TeX's memory you used:
  6401 multiletter control sequences out of 15000+600000
  10093 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,6n,32p,2326b,252s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,6n,32p,2326b,247s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/
@@ -397,7 +403,7 @@ s/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmti7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmti9.pfb>
-Output written on NLPNotes.pdf (36 pages, 2815207 bytes).
+Output written on NLPNotes.pdf (36 pages, 2812595 bytes).
 PDF statistics:
  196 PDF objects out of 1000 (max. 8388607)
  135 compressed objects within 2 object streams
