@@ -65,3 +65,7 @@
 \contentsline {subsubsection}{Meronym}{31}
 \contentsline {subsubsection}{Entailment}{32}
 \contentsline {subsubsection}{Other WordNet Relation Types}{32}
+\contentsline {section}{\numberline {0.6}Computational Linguistics: Pre-processing steps}{34}
+\contentsline {subsection}{\numberline {0.6.1}Tokenization}{34}
+\contentsline {subsection}{\numberline {0.6.2}Normalization}{34}
+\contentsline {subsection}{\numberline {0.6.3}Stemming}{35}
